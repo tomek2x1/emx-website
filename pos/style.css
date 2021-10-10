@@ -1,0 +1,128 @@
+body{
+    background-color: rgb(247, 247, 247);
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.pos{
+    max-width:1200px;
+    margin:20px auto;
+    font-size:12px;
+}
+
+.pos-intro{
+    background-color: #fff;
+    padding: 10px;
+}
+
+.pos-intro__paragraph{
+    margin:0;
+    line-height: 18px;
+    text-align: justify;
+}
+
+.pos__title{
+    margin-top:40px;
+    margin-left:30px;
+    font-weight: 500;
+}
+
+.pos__map{
+    background-color: #fff;
+    padding: 20px 30px;  
+}
+
+.pos-footer{
+    margin-top:10px;
+}
+
+.pos-table, .pos-table__header, .pos-table__row {
+    border-bottom: 2px solid #e5e5e5;
+    border-collapse: collapse;
+}
+
+.pos-table__row:last-child {
+    border-right: none;
+}
+
+
+.pos-footer__wrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    overflow-x:auto;
+    padding:10px;
+}
+
+.pos-table{
+    width:100%;
+    font-size: 10px;
+}
+
+.pos-table__pin{
+    height:28px;
+}
+
+.pos-table__header-name{
+    margin:-5px 0px 5px;
+}
+
+.pos-table__row{
+    font-weight:500;
+    border-right: 2px solid #e5e5e5;
+}
+
+.pos-table__row--name{
+    padding: 10px 10px 10px 0px;
+}
+
+.pos-table__dot{
+    height:18px;
+    width:18px;
+    border-radius:50%;
+    margin:0 auto;
+}
+
+.pos-table__dot--primary-color{
+    background-color: #ee771a;
+}
+
+.pos-table__dot--secondary-color{
+    background-color: #ccc;
+}
+
+@media all and (min-width: 576px) {
+    .pos-table{
+        font-size: 12px;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .pos{
+        font-size:14px;
+    }
+
+    .pos-intro {
+        background-color: #fff;
+        padding: 20px 30px;
+    }
+
+    .pos-intro__paragraph{
+        line-height: 24px;
+    }
+
+    .pos-footer__wrapper{
+        padding:30px;
+    }
+
+    .pos-table{
+        font-size: 14px;
+    }
+
+    .pos-table__row{
+        font-weight:600;
+    }
+
+    .pos-table__row--name{
+        padding: 12px 12px 12px 0px;
+    }
+}

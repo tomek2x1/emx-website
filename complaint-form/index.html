@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freshdesk Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="return">
+        <div id="return-form" class="return-form">
+            <h2 class="return-form__title">Formularz reklamacji</h2>
+            <!-- Numer zamówienia lub numer faktury (obowiązkowe jedno z dwóch) -->
+            <label for="orderInvoiceNumber" class="return-form__label">
+                <div class="return-form__name">
+                    Numer zamówienia lub numer faktury:
+                    <span class="return-form__star">*</span>
+                </div>
+                <input type="text" name="orderInvoiceNumber" id="orderInvoiceNumber"
+                    class="return-form__field return-form__hide-arrows" />
+                <p class="return-form__require-info">
+                    Podaj numer zamówienia lub numer faktury
+                </p>
+            </label>
+            <!-- Producent -->
+            <label for="producer" class="return-form__label">
+                <div class="return-form__name">Producent: <span class="return-form__star">*</span></div>
+                <select id="producer" class="return-form__field">
+                    <option value="" selected disabled hidden>Wybierz</option>
+                    <option value="Warmtec">Warmtec</option>
+                    <option value="Dimplex">Dimplex</option>
+                    <option value="Thermoval">Thermoval</option>
+                    <option value="Emultimax">Emultimax</option>
+                    <option value="Blaupunkt">Blaupunkt</option>
+                    <option value="Eltrace">Eltrace</option>
+                    <option value="Eberle">Eberle</option>
+                    <option value="Inny">Inny</option>
+                </select>
+            </label>
+            <!-- Nazwa towaru -->
+            <label for="productName" class="return-form__label return-form__tooltip">
+                <div class="return-form__name">
+                    Nazwa towaru: <span class="return-form__star">*</span>
+                </div>
+                <input type="text" name="productName" id="productName" class="return-form__field" />
+                <span class="return-form__tooltiptext">Prosimy o przepisanie nazwy produktu z faktury lub maila
+                    potwierdzającego zamówienie</span>
+                <p class="return-form__require-info">
+                    Prosimy o podanie nazwy produktu
+                </p>
+            </label>
+            <!-- Ilość sztuk -->
+            <label for="quantity" class="return-form__label">
+                <div class="return-form__name">Ilość:</div>
+                <input type="number" id="quantity" name="quantity" value="1" min="1" max="999"
+                    class="return-form__field return-form__arrows" />
+            </label>
+            <!-- Rodzaj zgłoszenia -->
+            <label for="typeComplaint" class="return-form__label">
+                <div class="return-form__name">
+                    Rodzaj zgłoszenia: <span class="return-form__star">*</span></div>
+                <select id="typeComplaint" class="return-form__field">
+                    <option value="" selected disabled hidden>Wybierz</option>
+                    <option value="Gwarancja producenta">Gwarancja producenta</option>
+                    <option value="Rękojmia">Rękojmia</option>
+                    <option value="Dostałem towar uszkodzony">
+                        Dostałem towar uszkodzony
+                    </option>
+                </select>
+                <p class="return-form__require-info">
+                    Prosimy o podanie rodzaju zgłoszenia
+                </p>
+            </label>
+            <!-- Oczekiwany sposób zakończenia zgłoszenia -->
+            <label for="expectedFinishSubmission" id="expectedFinishSubmissionLabel"
+                class="return-form__label return-form__extra-field">
+                <div class="return-form__name">
+                    Oczekiwany sposób zakończenia zgłoszenia: <span class="return-form__star">*</span>
+                </div>
+                <select id="expectedFinishSubmission" class="return-form__field">
+                    <option value="" selected disabled hidden>Wybierz</option>
+                    <option value="Naprawa towaru">Naprawa towaru</option>
+                    <option value="Wymiana towaru na nowy">
+                        Wymiana towaru na nowy
+                    </option>
+                    <option value="Obniżenie ceny towaru">Obniżenie ceny towaru</option>
+                    <option value="Odstąpienie od umowy (istotna wada towaru)">
+                        Odstąpienie od umowy (istotna wada towaru)
+                    </option>
+                </select>
+                <p class="return-form__require-info">
+                    Prosimy o podanie sposobu zakończenia zgłoszenia
+                </p>
+            </label>
+            <!-- Opis wady -->
+            <label for="description" class="return-form__label">
+                <div class="return-form__name">
+                    Opis wady:
+                    <span class="return-form__star">*</span>
+                </div>
+                <textarea name="description" id="description" class="return-form__field"></textarea>
+                <p class="return-form__require-info">
+                    Prosimy o opisanie wady
+                </p>
+            </label>
+            <!-- Zdjęcia wady -->
+            <label for="userFile" class="return-form__label">
+                <div class="return-form__name">Dodaj zdjęcia wady:</div>
+                <input type="file" id="userFile" name="userFile" multiple />
+                <p class="return-form__require-info">
+                    Wymagane są pliki w formacie: png, jpg, jpeg
+                </p>
+            </label>
+            <!-- Imię i nazwisko lub nazwa firmy -->
+            <label for="userName" class="return-form__label">
+                <div class="return-form__name">
+                    Imię i nazwisko lub nazwa firmy:
+                    <span class="return-form__star">*</span>
+                </div>
+                <input type="text" name="userName" id="userName" class="return-form__field" />
+                <p class="return-form__require-info">Pole jest wymagane</p>
+            </label>
+            <!-- Adres email -->
+            <label for="userEmail" class="return-form__label">
+                <div class="return-form__name">
+                    Adres email: <span class="return-form__star">*</span>
+                </div>
+                <input type="email" name="userEmail" id="userEmail" class="return-form__field" />
+                <p class="return-form__require-info">Adres email nie jest poprawny</p>
+            </label>
+            <!-- Telefon -->
+            <label for="userPhone" class="return-form__label">
+                <div class="return-form__name">
+                    Numer telefonu: <span class="return-form__star">*</span>
+                </div>
+                <input type="tel" name="userPhone" id="userPhone" class="return-form__field return-form__hide-arrows" />
+                <p class="return-form__require-info">
+                    Numer telefonu nie jest poprawny
+                </p>
+            </label>
+            <!-- Adres -->
+            <label for="userAddress" class="return-form__label">
+                <div class="return-form__name">
+                    Adres: <span class="return-form__star">*</span>
+                </div>
+                <input type="text" name="userAddress" id="userAddress" class="return-form__field" />
+                <p class="return-form__require-info">Pole jest wymagane</p>
+            </label>
+            <!-- Kod pocztowy -->
+            <label for="userZipCode" class="return-form__label">
+                <div class="return-form__name">
+                    Kod pocztowy: <span class="return-form__star">*</span>
+                </div>
+                <input type="text" name="userZipCode" id="userZipCode" class="return-form__field" />
+                <p class="return-form__require-info">Pole jest wymagane</p>
+            </label>
+            <!-- Miejscowość -->
+            <label for="userCity" class="return-form__label">
+                <div class="return-form__name">
+                    Miejscowość: <span class="return-form__star">*</span>
+                </div>
+                <input type="text" name="userCity" id="userCity" class="return-form__field" />
+                <p class="return-form__require-info">Pole jest wymagane</p>
+            </label>
+            <!-- Preferowana data odbioru -->
+            <label for="userDeliveryDate" class="return-form__label">
+                <div class="return-form__name">
+                    Preferowana data odbioru: <span class="return-form__star">*</span>
+                </div>
+                <input type="date" name="userDeliveryDate" id="userDeliveryDate" class="return-form__field" />
+                <p class="return-form__require-info">Pole jest wymagane</p>
+            </label>
+            <!-- Zgoda -->
+            <label for="userAgreement" class="return-form__label return-form__agrement">
+                <input type="checkbox" id="userAgreement" name="userAgreement" />
+                <div class="return-form__agrement-text">
+                    Wyrażam zgodę na przetwarzanie moich danych osobowych przez P.W.
+                    Multimax Damian Chwiejczak, 22-400 Zamość, przetwarzanych do celów
+                    związanych z naprawą gwarancyjną sprzętu.
+                </div>
+            </label>
+            <div class="return-form__btn-wrapper">
+                <button id="sendForm" class="return-form__btn">
+                    Wyślij formularz
+                </button>
+            </div>
+        </div>
+        <div id="return-spinner" class="return-spinner return-message__hide">
+            <div class="return-spinner__container">
+                <div class="return-spinner__wrapper">
+                    <div class="return-spinner-circle1 return-spinner-circle"></div>
+                    <div class="return-spinner-circle2 return-spinner-circle"></div>
+                    <div class="return-spinner-circle3 return-spinner-circle"></div>
+                    <div class="return-spinner-circle4 return-spinner-circle"></div>
+                    <div class="return-spinner-circle5 return-spinner-circle"></div>
+                    <div class="return-spinner-circle6 return-spinner-circle"></div>
+                    <div class="return-spinner-circle7 return-spinner-circle"></div>
+                    <div class="return-spinner-circle8 return-spinner-circle"></div>
+                    <div class="return-spinner-circle9 return-spinner-circle"></div>
+                    <div class="return-spinner-circle10 return-spinner-circle"></div>
+                    <div class="return-spinner-circle11 return-spinner-circle"></div>
+                    <div class="return-spinner-circle12 return-spinner-circle"></div>
+                </div>
+            </div>
+        </div>
+        <div id="return-message" class="return-message return-message__hide">
+            <div class="return-message__container">
+                <h2 class="return-message__success">
+                    Formularz został wysłany poprawnie
+                </h2>
+                <h3 class="return-message__id">
+                    Numer Twojego zgłoszenia:
+                    <strong>
+                        <div id="freshdeskId"></div>
+                    </strong>
+                </h3>
+                <p class="return-message__remember">
+                    * Potwierdzenie wysłania formularza znajdziesz na swojej skrzynce
+                    pocztowej.
+                </p>
+                <p class="return-message__remember">
+                    ** Pamiętaj, aby spakować wszystkie elementy zestawu oraz oznaczyć
+                    paczkę numerem zgłoszenia.
+                </p>
+            </div>
+        </div>
+        <div id="return-error" class="return-message return-error return-message__hide">
+            <div class="return-message__container">
+                <h2 class="return-message__error">
+                    Podczas wysyłania formularza wystąpił błąd. Spróbuj później.
+                </h2>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

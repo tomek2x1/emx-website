@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(247, 247, 247);
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+.taxfree {
+  max-width: 1200px;
+  margin: 20px auto;
+  font-size: 14px;
+}
+
+.taxfree-header {
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 20px 30px;
+  text-align: justify;
+}
+
+.taxfree-header__title{
+  font-size: 20px;
+}
+
+.taxfree-header__list{
+  padding-left:0;
+}
+
+.taxfree-header__item{
+  margin-bottom:15px;
+  font-size:12px;
+}
+
+.taxfree-body{
+  margin-bottom: 20px;
+  text-align:justify;
+}
+
+.taxfree-body__box{
+  background: #fff;
+  margin-top: 10px;
+}
+
+.taxfree-body__title{
+  padding-left:30px;
+  padding-right:30px;
+  font-weight: 500;
+}
+
+.taxfree-box__paragraph{
+  font-size: 12px;
+}
+
+.taxfree-box__import{
+  font-weight: 600;
+}
+
+.taxfree-box__accordion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 20px 30px;
+}
+
+.taxfree-box__accordion:hover {
+  background:rgb(247, 247, 247);
+}
+
+.taxfree-box__arrow-down {
+  border: solid #ff4e09;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transition: transform 0.2s ease-out;
+  margin-left: 10px;
+}
+
+.taxfree-box__accordion.active .taxfree-box__arrow-down {
+  transform: rotate(225deg);
+}
+
+.taxfree-box__body{
+  padding: 0px 30px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+
+.taxfree-box__subtitle{
+  font-weight:600;
+  font-size:18px;
+  margin-top:0;
+}
+
+.taxfree-box__text{
+  font-size: 12px;
+}
+
+.taxfree-box__law{
+  font-size: 8px;
+}
+
+.taxfree-box__law--title{
+  font-weight: 700;
+}
+
+@media all and (min-width:768px){
+  .taxfree {
+    max-width: 1200px;
+    margin: 20px auto;
+    font-size: 16px;
+  }
+
+  .taxfree-header__list{
+    padding-left:20px;
+  }
+
+  .taxfree-header__item{
+    font-size:14px;
+  }
+
+  .taxfree-box__subtitle{
+    font-weight:800;
+  }
+
+  .taxfree-box__paragraph{
+    font-size: 14px;
+  }
+
+  .taxfree-box__text{
+    font-size: 14px;
+  }
+
+  .taxfree-box__law{
+    font-size: 10px;
+  }
+}

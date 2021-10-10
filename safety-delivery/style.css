@@ -1,0 +1,246 @@
+body{
+    background-color: rgb(247, 247, 247);
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.stransport{
+    max-width:1200px;
+    margin:20px auto;
+    font-size:13px;
+}
+
+.stransport__header {
+    background-color: #fff;
+    padding: 20px 30px;
+}
+
+.stransport__paragraph{
+    margin:0;
+    line-height: 20px;
+    text-align: justify;
+}
+
+.stransport-body__box{
+    background:#fff;
+    padding:20px 30px;
+    margin-top:10px;
+}
+
+.stransport-body__accordion{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.stransport-body__arrow-down{
+    border: solid #ff4e09;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px; 
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transition: transform 0.2s ease-out;
+    margin-left:10px;
+}
+
+.stransport-body__accordion.active .stransport-body__arrow-down {
+    transform: rotate(225deg);
+}
+
+.stransport-body__panel{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+
+.stransport-body__table{
+    overflow-x:auto;
+}
+
+.stransport-body__tabel{
+    width:100%;
+    margin-top:20px;
+    overflow-x:auto;
+}
+
+.stransport-table{
+    width: 100%;
+    table-layout: fixed;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+.stransport-table__header{
+    text-transform: uppercase;
+    font-size: 14px;
+}    
+
+.stransport-table, .stransport-table__row {
+    border-bottom: 1px solid #e5e5e5;
+    border-collapse: collapse;
+}
+
+.stransport-table__row{
+    width:25%;
+}
+
+.stransport-table__row:last-child {
+    border-bottom: none;
+}
+
+.stransport-table__row:nth-child(6){
+    border-bottom: none;
+}
+
+.stransport-table:last-child{
+    border-bottom:none
+}
+
+.stransport-table__first-column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    font-weight: 600;
+}
+
+.stransport-table__dot{
+    height: 18px;
+    width: 18px;
+    border:1px solid #e5e5e5;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.stransport-table__dot--primary-color {
+    color:#F8B133;
+}
+
+.stransport-table__dot--secondary-color {
+    color:#F29100;
+}
+
+.stransport-table__dot--third-color {
+    color:#EE771A;
+}
+
+.stransport-table__dot--primary-bgcolor {
+    background-color:#F8B133;
+}
+
+.stransport-table__dot--secondary-bgcolor {
+    background-color:#F29100;
+}
+
+.stransport-table__dot--third-bgcolor {
+    background-color:#EE771A;
+}
+
+.stransport-table__dot--fourth-bgcolor {
+    background-color:#e5e5e5;
+}
+
+.stransport-table__price{
+    text-align: center;
+    border-radius:30px;
+    max-width: 180px;
+    margin:30px auto 0px;
+}
+
+.stransport-table__image{
+    max-width:200px;
+    margin-top:10px;
+}
+
+.stransport-table__price{
+    padding:0px;
+    font-size:30px;
+    color:#fff;
+    font-weight: 300;
+}
+
+.stransport-table__number{
+    font-weight: 700;
+}
+
+.stransport__lists{
+    margin-top:50px;
+    max-width:65%;
+}
+
+.stransport-list{
+    list-style-type: none;
+}
+
+.stransport-list__title{
+    font-weight:600;
+}
+
+.stransport-list__item{
+    margin-top:-10px;
+}
+
+.stransport-list li:before {
+    content: "";
+    border-color: transparent rgb(242, 145, 0);
+    border-style: solid;
+    border-width: 0.32em 0 0.32em 0.45em;
+    display: block;
+    height: 0;
+    width: 0;
+    left: -.6em;
+    top: 1em;
+    position: relative;
+}
+
+.stransport-legend{
+    list-style-type: none;
+    margin-left:-10px;
+}
+
+.stransport-legend__description{
+    margin:0;
+}
+
+.stransport-footer{
+    margin-top:10px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-around;
+    background-color:#fff;
+}
+
+.stransport-footer__column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stransport-footer__image{
+    max-width:150px;
+    margin-top:-20px;
+}
+
+.stransport-footer__list{
+    margin:-20px 0px 0px;
+    padding-left:0px;
+    list-style-type: none;
+}
+
+.stransport-footer__item{
+    margin-top:-5px;
+}
+
+.stransport-footer__item::before {
+    content: "";
+    background:linear-gradient(150deg,#ff4e09 0%,#ff9300 100%);
+    display: block;
+    height: 6px;
+    width: 6px;
+    border-radius:50%;
+    left: -1em;
+    top: .9em;
+    position: relative;
+}

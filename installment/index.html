@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dostawa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="loan">
+        <div class="loan__wrapper">
+            <div class="loan__buttons">
+                <div class="loan__button loan__button--active" onclick="openTab(event, 'loan__internet')">
+                    Raty przez Internet
+                </div>
+                <div class="loan__button" onclick="openTab(event, 'loan__pos')">
+                    Raty w Salonach i Punktach Emultimax
+                </div>
+            </div>
+            <div id="loan__internet" class="loan__body">
+                <div class="loan-body__wrapper">
+                    <div class="loan-ca">
+                        <div class="loan-ca__header">
+                            <img class="loan-ca__image" src="img/credit-agricole2.png">
+                            <a href="" target="_blank"><img class="loan-ca__image--button"
+                                    src="img/credit-agricole-button.png"></a>
+                        </div>
+                        <div class="loan-ca__body">
+                            <div class="loan-ca__step">
+                                <img class="loan-ca__icon" src="img/koszyk.png">
+                                <p>Wybierz produkty o wartości min. 300 zł. W koszyku wybierz formę płatności raty
+                                    Credit Agricole.</p>
+                            </div>
+                            <div class="loan-ca__step">
+                                <img class="loan-ca__icon" src="img/wniosek.png">
+                                <p>Wypełnij wniosek online i poczekaj na decyzję kredytową.</p>
+                            </div>
+                            <div class="loan-ca__step">
+                                <img class="loan-ca__icon" src="img/dowod.png">
+                                <p>Potwierdź swoją tożsamość wykonując przelew w kwocie 1 zł i załącz zdjęcie dowodu
+                                    osobistego.</p>
+                            </div>
+                            <div class="loan-ca__step">
+                                <img class="loan-ca__icon" src="img/sms.png">
+                                <p>Zaakceptuj regulamin i potwierdź zawarcie umowy kodem otrzymanym w wiadomości SMS.
+                                </p>
+                            </div>
+                            <div class="loan-ca__step">
+                                <img class="loan-ca__icon" src="img/mail.png">
+                                <p>Umowę otrzymasz na swoją skrzynkę e-mail.
+                                </p>
+                            </div>
+                            <div class="loan-ca__step">
+                                <img class="loan-ca__icon" src="img/dostawa.png">
+                                <p>Zaczynamy realizować Twoje zamówienie. Niebawem trafi do Ciebie.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="loan-santander">
+                        <div class="loan-santander__header">
+                            <img class="loan-santander__image" src="img/santander.png">
+                            <a href="" target="_blank"><img class="loan-santander__image--button"
+                                    src="img/eraty2.png"></a>
+
+                        </div>
+                        <div class="loan-santander__body">
+                            <div class="loan-santander__step">
+                                <img class="loan-santander__icon" src="img/koszyk.png">
+                                <p>Wybierz produkt o wartości min. 100 zł, który Cię interesuje. W koszyku wybierz formę
+                                    płatności eRaty Santander Consumenr Bank S.A.</p>
+                            </div>
+                            <div class="loan-santander__step">
+                                <img class="loan-santander__icon" src="img/wniosek.png">
+                                <p>Wypełnij wniosek online na stronie eRaty i poczekaj na decyzję kredytową.</p>
+                            </div>
+                            <div class="loan-santander__step">
+                                <img class="loan-santander__icon" src="img/dowod.png">
+                                <p>Potwierdź swoją tożsamość wykonując przelew w kwocie 1 zł lub za pośrednictwem firmy
+                                    kurierskiej.</p>
+                            </div>
+                            <div class="loan-santander__step">
+                                <img class="loan-santander__icon" src="img/dostawa.png">
+                                <p>Zaczynamy realizować Twoje zamówienie. Niebawem trafi do Ciebie.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+            <div id="loan__pos" class="loan__body">
+                <div class="loan-body__wrapper">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic accusantium necessitatibus atque
+                    tempora laboriosam placeat harum ex aspernatur numquam dicta, debitis, nihil consequuntur iusto
+                    doloribus et quasi earum qui unde.
+                </div>
+            </div>
+        </div>
+
+        <div class="loan-regulations">
+            <h2 class="loan-regulations__title">Regulaminy</h2>
+            <ul class="loan-regulations__list">
+                <li class="loan-regulations__item"><a href="" target="_blank" class="loan-regulations__link">Item</a>
+                </li>
+                <li class="loan-regulations__item"><a href="" target="_blank" class="loan-regulations__link">Item</a>
+                </li>
+                <li class="loan-regulations__item"><a href="" target="_blank" class="loan-regulations__link">Item</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="loan-faq">
+            <h2 class="loan-faq__title">Najczęściej zadawane pytania</h2>
+            <div class="loan-faq__box">
+                <div class="loan-faq__accordion">
+                    <p class="loan-faq__question">Kto może skorzystać z zakupów na raty</p>
+                    <i class="loan-faq__arrow-down"></i>
+                </div>
+                <div class="loan-faq__panel">
+                    <p class="loan-faq__answer">Zakupu na raty mogą dokonać osoby fizyczne, które ukończyły 18 lat oraz
+                        posiadają internetowe
+                        konto
+                        bankowe, które jest niezbędne do weryfikacji tożsamości podczas składania wniosku przez
+                        Internet.
+                    </p>
+                </div>
+            </div>
+
+            <div class="loan-faq__box">
+                <div class="loan-faq__accordion">
+                    <p class="loan-faq__question">Jakie dokumenty będą potrzebne do wniosku kredytowego?</p>
+                    <i class="loan-faq__arrow-down"></i>
+                </div>
+                <div class="loan-faq__panel">
+                    <p class="loan-faq__answer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum fuga
+                        inventore necessitatibus
+                        dicta dignissimos ad delectus est minus eligendi esse, iusto tempora perspiciatis magnam alias?
+                        Laboriosam, accusamus dolorum! Minima, tempore.
+                    </p>
+                </div>
+            </div>
+
+            <div class="loan-faq__box">
+                <div class="loan-faq__accordion">
+                    <p class="loan-faq__question">Czy złożenie zamówienia oznacza uruchomienie kredytu?</p>
+                    <i class="loan-faq__arrow-down"></i>
+                </div>
+                <div class="loan-faq__panel">
+                    <p class="loan-faq__answer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum fuga
+                        inventore necessitatibus
+                        dicta dignissimos ad delectus est minus eligendi esse, iusto tempora perspiciatis magnam alias?
+                        Laboriosam, accusamus dolorum! Minima, tempore.
+                    </p>
+                </div>
+            </div>
+
+            <div class="loan-faq__box">
+                <div class="loan-faq__accordion">
+                    <p class="loan-faq__question">Co się stanie z zamówieniem jeśli wniosek kredytowy zostanie
+                        odrzucony?</p>
+                    <i class="loan-faq__arrow-down"></i>
+                </div>
+                <div class="loan-faq__panel">
+                    <p class="loan-faq__answer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum fuga
+                        inventore necessitatibus
+                        dicta dignissimos ad delectus est minus eligendi esse, iusto tempora perspiciatis magnam alias?
+                        Laboriosam, accusamus dolorum! Minima, tempore.
+                    </p>
+                </div>
+            </div>
+            <div class="loan-faq__box">
+                <div class="loan-faq__accordion">
+                    <p class="loan-faq__question">Chcę zwrócić produkt zakupiony na raty. Co powinienem zrobić?</p>
+                    <i class="loan-faq__arrow-down"></i>
+                </div>
+                <div class="loan-faq__panel">
+                    <p class="loan-faq__answer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum fuga
+                        inventore necessitatibus
+                        dicta dignissimos ad delectus est minus eligendi esse, iusto tempora perspiciatis magnam alias?
+                        Laboriosam, accusamus dolorum! Minima, tempore.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function openTab(evt, cityName) {
+            const tabscontent = [...document.getElementsByClassName("loan__body")];
+            tabscontent.forEach(tabcontent => {
+                tabcontent.style.display = "none";
+            })
+            const tablinks = [...document.getElementsByClassName("loan__button")];
+            tablinks.forEach(tablink => {
+                tablink.classList.remove("loan__button--active")
+            })
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.classList.add("loan__button--active")
+        }
+
+        const accordions = [...document.getElementsByClassName("loan-faq__accordion")];
+        accordions.forEach(accordion => {
+            accordion.addEventListener("click", function () {
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

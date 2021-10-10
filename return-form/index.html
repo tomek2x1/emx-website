@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshdesk Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="return">
+        <div id="return-form" class="return-form">
+            <h2 class="return-form__title">Formularz zwrotów</h2>
+            <label for="userName" class="return-form__label">
+                <span class="return-form__name">Imię: <span class="return-form__star">*</span></span>
+                <input type="text" name="userName" id="userName" class="return-form__field">
+                <p class="return-form__require-info">Imię jest wymagane</p>
+            </label>
+            <label for="userSurname" class="return-form__label">
+                <span class="return-form__name">Nazwisko: <span class="return-form__star">*</span></span>
+                <input type="text" name="userSurname" id="userSurname" class="return-form__field">
+                <p class="return-form__require-info">Nazwisko jest wymagane</p>
+            </label>
+            <label for="userEmail" class="return-form__label">
+                <span class="return-form__name">Adres email: <span class="return-form__star">*</span></span>
+                <input type="email" name="userEmail" id="userEmail" class="return-form__field">
+                <p class="return-form__require-info">Adres email nie jest poprawny</p>
+            </label>
+            <label for="userPhone" class="return-form__label">
+                <span class="return-form__name">Numer telefonu: <span class="return-form__star">*</span></span>            
+                <input type="tel" name="userPhone" id="userPhone" class="return-form__field return-form__hide-arrows">
+                <p class="return-form__require-info">Numer telefonu nie jest poprawny</p>
+            </label>
+            <label for="orderInvoiceNumber" class="return-form__label">
+                <span class="return-form__name">Numer zamówienia lub numer faktury: <span class="return-form__star">*</span></span>    
+                <input type="text" name="orderInvoiceNumber" id="orderInvoiceNumber" class="return-form__field return-form__hide-arrows">
+                <p class="return-form__require-info">Podaj numer zamówienia lub numer faktury</p>
+            </label>
+            <label for="accountNumber" class="return-form__label">
+                <span class="return-form__name">Numer rachunku bankowego: <span class="return-form__star">*</span></span> 
+                <input type="number" name="accountNumber" id="accountNumber" class="return-form__field return-form__hide-arrows">
+                <p class="return-form__require-info">Numer konta nie jest poprawny</p>
+            </label>
+            <label for="userReason" class="return-form__label">
+                <span class="return-form__name">Powód zwrotu: <span class="return-form__star">*</span></span> 
+                <select id="userReason" class="return-form__field">
+                    <option value="" selected disabled hidden>Wybierz</option>
+                    <option value="Produkt nie spełnia moich oczekiwań">Produkt nie spełnia moich oczekiwań</option>
+                    <option value="Produkt niezgodny z zamówieniem">Produkt niezgodny z zamówieniem</option>
+                    <option value="Produkt niezgodny z opisem na stronie">Produkt niezgodny z opisem na stronie</option>
+                    <option value="Inny powód">Inny powód</option>
+                    <option value="Nie chcę podawać przyczyny">Nie chcę podawać przyczyny</option>
+                </select>
+                <p class="return-form__require-info">Prosimy o podanie przyczyny zwrotu</p>
+            </label>
+            <label for="producer" class="return-form__label">
+                <span class="return-form__name">Producent:</span> 
+                <select id="producer" class="return-form__field">
+                    <option value="" selected disabled hidden>Wybierz</option>
+                    <option value="Warmtec">Warmtec</option>
+                    <option value="Dimplex">Dimplex</option>
+                    <option value="Thermoval">Thermoval</option>
+                    <option value="Emultimax">Emultimax</option>
+                    <option value="Blaupunkt">Blaupunkt</option>
+                    <option value="Eltrace">Eltrace</option>
+                    <option value="Eberle">Eberle</option>
+                    <option value="Inny">Inny</option>
+                </select>
+            </label>
+            <label for="productName" class="return-form__label return-form__tooltip">
+                <span class="return-form__name">Nazwa produktu: <span class="return-form__star">*</span></span> 
+                <input type="text" name="productName" id="productName" class="return-form__field">
+                <span class="return-form__tooltiptext">Prosimy o przepisanie nazwy produktu z faktury lub maila potwierdzającego zamówienie</span>
+                <p class="return-form__require-info">Prosimy o podanie nazwy produktu</p>
+            </label>
+            <label for="quantity" class="return-form__label">
+                <span class="return-form__name">Ilość:</span> 
+                <input type="number" id="quantity" name="quantity" value="1" min="1" max="999"  class="return-form__field return-form__arrows"/>
+            </label>
+            <label for="userAgreement" class="return-form__label return-form__agrement">
+                <input type="checkbox" id="userAgreement" name="agreement">
+                <div class="return-form__agrement-text">Wyrażam zgodę na przetwarzanie moich danych osobowych przez P.W. Multimax Damian Chwiejczak, 22-400 Zamość, przetwarzanych do celów związanych z odstąpieniem od umowy.</div>
+            </label>
+            <div class="return-form__btn-wrapper">
+                <button id="sendForm" class="return-form__btn">Wyślij formularz</button>
+            </div>
+        </div>
+        <div id="return-spinner" class="return-spinner return-message__hide">
+            <div class="return-spinner__container">
+                <div class="return-spinner__wrapper">
+                    <div class="return-spinner-circle1 return-spinner-circle"></div>
+                    <div class="return-spinner-circle2 return-spinner-circle"></div>
+                    <div class="return-spinner-circle3 return-spinner-circle"></div>
+                    <div class="return-spinner-circle4 return-spinner-circle"></div>
+                    <div class="return-spinner-circle5 return-spinner-circle"></div>
+                    <div class="return-spinner-circle6 return-spinner-circle"></div>
+                    <div class="return-spinner-circle7 return-spinner-circle"></div>
+                    <div class="return-spinner-circle8 return-spinner-circle"></div>
+                    <div class="return-spinner-circle9 return-spinner-circle"></div>
+                    <div class="return-spinner-circle10 return-spinner-circle"></div>
+                    <div class="return-spinner-circle11 return-spinner-circle"></div>
+                    <div class="return-spinner-circle12 return-spinner-circle"></div>
+                </div>
+            </div>
+        </div>
+        <div id="return-message" class="return-message return-message__hide">
+            <div class="return-message__container">
+                <h2 class="return-message__success">Formularz został wysłany poprawnie</h2>
+                <h3 class="return-message__id">Numer Twojego zgłoszenia: <strong><div id="freshdeskId"></div></strong></h3>
+                <p class="return-message__remember">* Potwierdzenie wysłania formularza znajdziesz na swojej skrzynce pocztowej.</p>
+                <p class="return-message__remember">** Pamiętaj, aby spakować wszystkie elementy zestawu oraz oznaczyć paczkę numerem zgłoszenia.</p>
+            </div>
+        </div>
+        <div id="return-error" class="return-message return-error return-message__hide">
+            <div class="return-message__container">
+                <h2 class="return-message__error">Podczas wysyłania formularza wystąpił błąd. Spróbuj później.</h2>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

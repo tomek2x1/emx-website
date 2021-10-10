@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freshdesk Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="return">
+        <div id="return-form" class="return-form">
+            <h2 class="return-form__title">Formularz zwrotów (stacjonarny)</h2>
+            <!-- Osoba przyjmująca zwrot -->
+            <label for="employee" class="return-form__label">
+                <div class="return-form__name">
+                    Osoba przyjmująca zwrot: <span class="return-form__star">*</span></div>
+                <select id="employee" name="employee" class="require return-form__field">
+                    <option value="" selected disabled hidden>Wybierz</option>
+                    <option value="Artur Kubera">Artur Kubera</option>
+                    <option value="Kamil Wojnarski">Kamil Wojnarski</option>
+                    <option value="Kamil Łygas">Kamil Łygas</option>
+                    <option value="Arkadiusz Nowakowski">Arkadiusz Nowakowski</option>
+                    <option value="Arkadiusz Dyjach">Arkadiusz Dyjach</option>
+                </select>
+                <p class="return-form__require-info">Wybierz swoje dane</p>
+            </label>
+            <!-- Miejsce zakupu -->
+            <label for="city" class="return-form__label">
+                <div class="return-form__name">Miejsce zakupu: <span class="return-form__star">*</span></div>
+                <select id="city" name="city" class="require return-form__field">
+                    <option value="" selected disabled hidden>Wybierz</option>
+                    <option value="Warszawa">Warszawa</option>
+                    <option value="Kraków">Kraków</option>
+                    <option value="Rzeszów">Rzeszów</option>
+                    <option value="Gdańsk">Gdańsk</option>
+                    <option value="Poznań">Poznań</option>
+                    <option value="Zamość">Zamość</option>
+                </select>
+                <p class="return-form__require-info">Podaj miejsce zakupu</p>
+            </label>
+            <!-- Numer zamówienia lub numer faktury -->
+            <label for="orderInvoiceNumber" class="return-form__label">
+                <div class="return-form__name">
+                    Numer zamówienia lub numer faktury: <span class="return-form__star">*</span>
+                </div>
+                <input type="text" name="orderInvoiceNumber" id="orderInvoiceNumber"
+                    class="require return-form__field" />
+                <p class="return-form__require-info">
+                    Podaj numer zamówienia lub numer faktury
+                </p>
+            </label>
+            <!-- Producent -->
+            <label for="producer" class="return-form__label">
+                <div class="return-form__name">Producent: <span class="return-form__star">*</span></div>
+                <select id="producer" name="producer" class="require return-form__field">
+                    <option value="" selected disabled hidden>Wybierz</option>
+                    <option value="Warmtec">Warmtec</option>
+                    <option value="Dimplex">Dimplex</option>
+                    <option value="Thermoval">Thermoval</option>
+                    <option value="Emultimax">Emultimax</option>
+                    <option value="Blaupunkt">Blaupunkt</option>
+                    <option value="Eltrace">Eltrace</option>
+                    <option value="Eberle">Eberle</option>
+                    <option value="Inny">Inny</option>
+                </select>
+                <p class="return-form__require-info">
+                    Podaj nazwę faktury
+                </p>
+            </label>
+            <!-- Nazwa towaru -->
+            <label for="" class="return-form__label return-form__tooltip">
+                <div class="return-form__name">
+                    Nazwa towaru: <span class="return-form__star">*</span>
+                </div>
+                <input type="text" name="productName" id="productName" class="require return-form__field" />
+                <p class="return-form__require-info">
+                    Podaj nazwę towaru
+                </p>
+            </label>
+            <!-- Ilość sztuk -->
+            <label for="quantity" class="return-form__label">
+                <div class="return-form__name">Ilość: <span class="return-form__star">*</span></div>
+                <input type="number" id="quantity" name="quantity" value="1" min="1" max="999"
+                    class="require return-form__field" />
+                <p class="return-form__require-info">
+                    Podaj ilość
+                </p>
+            </label>
+            <!-- Powód odstąpienia -->
+            <label for="reason" class="return-form__label">
+                <div class="return-form__name">Powód odstąpienia: <span class="return-form__star">*</span></div>
+                <select id="reason" name="reason" class="require return-form__field">
+                    <option value="" selected disabled hidden>Wybierz</option>
+                    <option value="Produkt nie spełnia moich oczekiwań">Produkt nie spełnia moich oczekiwań</option>
+                    <option value="Produkt niezgodny z zamówieniem">Produkt niezgodny z zamówieniem</option>
+                    <option value="Produkt niezgodny z opisem na stronie">Produkt niezgodny z opisem na stronie</option>
+                    <option value="Inny powód">Inny powód</option>
+                    <option value="Nie chcę podawać przyczyny">Nie chcę podawać przyczyny</option>
+                </select>
+                <p class="return-form__require-info">
+                    Podaj powód odstąpienia
+                </p>
+            </label>
+            <!-- Status -->
+            <div class="return-form__label">
+                <div class="return-form__name">
+                    Status zwrotu: <span class="return-form__star">*</span>
+                </div>
+                <div id="status-wrapper" class="return-form__field">
+                    <div>
+                        <label for="returnNotAccepted">
+                            <input type="radio" id="returnNotAccepted" name="status" value="Produkt przekazany do weryfikacji do Działu Obsługi Zwrotów i
+                                        Reklamacji">
+                            Produkt przekazany do weryfikacji do Działu Obsługi Zwrotów i
+                            Reklamacji</label>
+                    </div>
+
+                    <div>
+                        <label for="returnAccept">
+                            <input type="radio" id="returnAccept" name="status" value="Zwrot zaakceptowany">
+                            Zwrot zaakceptowany</label>
+                    </div>
+                </div>
+                <p class="return-form__require-info">
+                    Podaj status zwrotu
+                </p>
+            </div>
+            <!-- Zwrot nie jest zaakceptowany -->
+            <div id="boxReturnNotAccepted" class="return-form__box">
+                <!-- Imię i nazwisko lub nazwa firmy -->
+                <label for="userNameNotAccepted" class="return-form__label">
+                    <div class="return-form__name">
+                        Imię i nazwisko lub nazwa firmy: <span class="return-form__star">*</span>
+                    </div>
+                    <input type="text" name="userName" id="userNameNotAccepted" class="require-step1 return-form__field" />
+                    <p class="return-form__require-info">Pole jest wymagane</p>
+                </label>
+                <!-- Adres email -->
+                <label for="userEmail" class="return-form__label">
+                    <div class="return-form__name">
+                        Adres email: <span class="return-form__star">*</span>
+                    </div>
+                    <input type="email" name="userEmail" id="userEmail" class="require-step1 return-form__field" />
+                    <p class="return-form__require-info">Adres email nie jest poprawny</p>
+                </label>
+                <label for="userPhone" class="return-form__label">
+                    <span class="return-form__name">Numer telefonu: <span class="return-form__star">*</span></span>
+                    <input type="tel" name="userPhone" id="userPhone"
+                        class="require-step1 return-form__field">
+                    <p class="return-form__require-info">Numer telefonu nie jest poprawny</p>
+                </label>
+                <label for="accountNumberNotAccepted" class="return-form__label">
+                    <span class="return-form__name">Numer rachunku bankowego: <span
+                            class="return-form__star">*</span></span>
+                    <input type="number" name="accountNumberNotAccepted" id="accountNumberNotAccepted"
+                        class="require-step1 return-form__field">
+                    <p class="return-form__require-info">Numer konta nie jest poprawny</p>
+                </label>
+                <!-- Skład zestawu -->
+                <div class="return-form__label">
+                    <div class="return-form__name">
+                        Skład zestawu: <span class="return-form__star">*</span>
+                    </div>
+                    <div id="package-wrapper" class="return-form__field">
+                        <div>
+                            <input type="radio" id="packageComplete" name="package" value="Kompletny"
+                                class="require-step1">
+                            <label for="packageComplete">Kompletny</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="packageNotComplete" name="package" value="Nie kompletny"
+                                class="require-step1">
+                            <label for="packageNotComplete">Nie kompletny</label>
+                        </div>
+                    </div>
+                    <p class="return-form__require-info">Podaj skład zestawu</p>
+                </div>
+                <!-- Brakujące elementy zestawu -->
+                <label for="missElement" id="missElementLabel" class="return-form__label return-form__extra-field">
+                    <div class="return-form__name">
+                        Brakujące elementy zestawu: <span class="return-form__star">*</span>
+                    </div>
+                    <input type="text" name="missElement" id="missElement" class="require-step1 return-form__field" />
+                    <p class="return-form__require-info">Wymień brakujące elementy</p>
+                </label>
+                <!-- Opis stanu urządzenia -->
+                <label for="description" class="return-form__label">
+                    <div class="return-form__name">
+                        Opis stanu urządzenia:
+
+                    </div>
+                    <textarea name="description" id="description" class="require-step1 return-form__field"
+                        placeholder="wpisz wady produktu, np. rysa na przedniej obudowie"></textarea>
+                    <p class="return-form__require-info">
+                        Prosimy o opisanie wady
+                    </p>
+                </label>
+            </div>
+            <!-- Zwrot zaakceptowany -->
+            <div id="boxReturnAccepted" class="return-form__box">
+                <!-- Kwota zwrotu -->
+                <label for="price" class="return-form__label">
+                    <div class="return-form__name">Kwota zwrotu (zł): <span class="return-form__star">*</span></div>
+                    <input type="number" id="price" name="price" min="0"
+                        class="return-form__field return-form__arrows" />
+                    <p class="return-form__require-info">Podaj kwotę zwrotu</p>
+                </label>
+                <!-- Forma zwrotu należności -->
+                <div class="return-form__label">
+                    <div class="return-form__name">
+                        Forma zwrotu należności: <span class="return-form__star">*</span>
+                    </div>
+                    <div id="cashback-wrapper" class="return-form__field">
+                        <div>
+                            <input type="radio" id="cash" name="cashback" value="Gotówka">
+                            <label for="cash">Gotówka</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="bankTransfer" name="cashback" value="Przelew bankowy">
+                            <label for="bankTransfer">Przelew bankowy</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="bankTransferBox" class="return-form__extra-field">
+                    <!-- Imię i nazwisko lub nazwa firmy -->
+                    <label for="userNameAccepted" class="return-form__label">
+                        <div class="return-form__name">
+                            Imię i nazwisko lub nazwa firmy:
+
+                        </div>
+                        <input type="text" name="userName" id="userNameAccepted" class="return-form__field" />
+                        <p class="return-form__require-info">Pole jest wymagane</p>
+                    </label>
+                    <label for="accountNumberAccepted" class="return-form__label">
+                        <span class="return-form__name">Numer rachunku bankowego: <span
+                                class="return-form__star">*</span></span>
+                        <input type="number" name="accountNumberAccepted" id="accountNumberAccepted"
+                            class="return-form__field">
+                        <p class="return-form__require-info">Numer konta nie jest poprawny</p>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Zgoda -->
+            <label for="userAgreement" class="return-form__label return-form__agrement">
+                <input type="checkbox" id="userAgreement" name="userAgreement" class="require" />
+                <div class="return-form__agrement-text">
+                    <div>Wyrażam zgodę na przetwarzanie moich danych osobowych przez P.W. MULTIMAX Damian
+                        Chwiejczak,
+                        ul.
+                        Peowiaków 9, 22-400
+                        Zamość, przetwarzanych do celów związanych z reklamacją lub zwrotem towaru. <span
+                        class="return-form__star">*</span></div>
+                </div>
+            </label>
+            <div class="return-form__btn-wrapper">
+                <button id="sendForm" class="return-form__btn">
+                    Wyślij formularz
+                </button>
+            </div>
+            <div class="return-form__footer">Administratorem Państwa danych osobowych jest P.W. MULTIMAX Damian Chwiejczak, ul.
+                    Peowiaków 9,
+                    22-400 Zamość. Dane
+                    osobowe będą przetwarzane do celów związanych z reklamacją lub zwrotem towaru.
+            </div>
+        </div>
+        <div id="return-spinner" class="return-spinner return-message__hide">
+            <div class="return-spinner__container">
+                <div class="return-spinner__wrapper">
+                    <div class="return-spinner-circle1 return-spinner-circle"></div>
+                    <div class="return-spinner-circle2 return-spinner-circle"></div>
+                    <div class="return-spinner-circle3 return-spinner-circle"></div>
+                    <div class="return-spinner-circle4 return-spinner-circle"></div>
+                    <div class="return-spinner-circle5 return-spinner-circle"></div>
+                    <div class="return-spinner-circle6 return-spinner-circle"></div>
+                    <div class="return-spinner-circle7 return-spinner-circle"></div>
+                    <div class="return-spinner-circle8 return-spinner-circle"></div>
+                    <div class="return-spinner-circle9 return-spinner-circle"></div>
+                    <div class="return-spinner-circle10 return-spinner-circle"></div>
+                    <div class="return-spinner-circle11 return-spinner-circle"></div>
+                    <div class="return-spinner-circle12 return-spinner-circle"></div>
+                </div>
+            </div>
+        </div>
+        <div id="return-message" class="return-message return-message__hide">
+            <div class="return-message__container">
+                <h2 class="return-message__success">
+                    Formularz został wysłany poprawnie
+                </h2>
+                <h3 class="return-message__id">
+                    Numer Twojego zgłoszenia:
+                    <strong>
+                        <div id="freshdeskId"></div>
+                    </strong>
+                </h3>
+                <p class="return-message__remember">
+                    * Potwierdzenie wysłania formularza znajdziesz na swojej skrzynce
+                    pocztowej.
+                </p>
+                <p class="return-message__remember">
+                    ** Pamiętaj, aby spakować wszystkie elementy zestawu oraz oznaczyć
+                    paczkę numerem zgłoszenia.
+                </p>
+            </div>
+        </div>
+        <div id="return-error" class="return-message return-error return-message__hide">
+            <div class="return-message__container">
+                <h2 class="return-message__error">
+                    Podczas wysyłania formularza wystąpił błąd. Spróbuj później.
+                </h2>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,318 @@
+*{
+      box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(247, 247, 247);
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.loan{
+    max-width:1200px;
+    margin:20px auto;
+    font-size:14px;
+}
+
+.loan__wrapper{
+    position: relative;
+}
+
+.loan__buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.loan__button{
+    flex-basis: 49%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:3px solid #d0d0d0;
+    text-align: center;
+    padding: 10px;
+    font-size:16px;
+    font-weight: 500;
+    z-index:1;
+    cursor:pointer;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    background:#fff;
+}
+
+.loan__button.loan__button--active{
+    border-color:#ff4e09;
+    z-index:3;
+    position:relative;
+
+}
+
+.loan__button.loan__button--active::before{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:3px;
+    margin-bottom:-3px;
+    background-color: #fff;
+}
+
+.loan__body{
+    position: relative;
+    width:100%;
+    margin-top:-3px;
+    z-index:2;
+    border-style: solid;
+    border-width: 3px;
+    border-image: linear-gradient(90deg,#ff4e09 0%,#ff7c00 100%) 1;
+    background-color: #fff;
+}
+
+.loan__body:last-child{
+    display: none;
+}
+
+.loan-body__wrapper{
+    max-width:800px;
+    margin:30px auto;
+}
+
+.loan-ca__header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.loan-ca__image{
+    height:50px;
+    margin-bottom:20px;
+}
+
+.loan-ca__image--button{
+      height:30px;  
+}
+
+.loan-ca__body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.loan-ca__step{
+    flex-basis:90%;
+    text-align: justify;
+    padding:12px 20px;
+    font-size:12px;
+}
+
+.loan-ca__icon{
+    max-width:70px;
+    display: block;
+    margin:0 auto;
+}
+
+.loan-santander__header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.loan-santander__image{
+    height:80px;
+}
+
+.loan-santander__image--button{
+      height:30px;
+      margin-bottom:20px; 
+}
+
+.loan-santander__body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.loan-santander__step{
+    flex-basis:90%;
+    text-align: justify;
+    padding:0px 30px;
+    font-size:12px;
+}
+
+.loan-santander__icon{
+    max-width:70px;
+    display: block;
+    margin:0 auto;
+}
+
+.loan-regulations{
+    margin-top:40px;  
+}
+
+.loan-regulations__title, .loan-faq__title {
+    margin-top:40px;
+    margin-left:40px;
+    font-weight: 500;
+}
+
+.loan-regulations__list{
+    background-color: #fff;
+    list-style-type: none;
+    padding:20px 20px;
+}
+
+.loan-regulations__item{
+    margin-left:30px;
+    margin-top:-10px;
+}
+
+.loan-regulations__item::before {
+  content: "";
+  border-color: transparent #ff4e09;
+  border-style: solid;
+  border-width: 0.35em 0 0.35em 0.45em;
+  display: block;
+  height: 0;
+  width: 0;
+  left: -.7em;
+  top: 0.9em;
+  position: relative;
+}
+
+.loan-regulations__link{
+    text-decoration: none;
+    color:#000;
+}
+
+.loan-regulations__link:hover{
+    color:#ff4e09;
+}
+
+/* FAQ */
+.loan-faq__box{
+    background:#fff;
+    margin-top:20px;
+}
+
+.loan-faq__box:last-child{
+    margin-bottom:30px;
+}
+
+.loan-faq__accordion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    cursor:pointer;
+    padding:5px 40px 5px;
+}
+
+.loan-faq__question{
+    font-weight:600;
+    font-size: 12px;
+}
+
+.loan-faq__arrow-down{
+    border: solid #ff4e09;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px; 
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transition: transform 0.2s ease-out;
+    margin-left:10px;
+}
+
+.loan-faq__panel {
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.loan-faq__answer{
+  padding:0px 40px 20px;
+  margin-top:0;
+  font-size:12px;
+}
+
+.loan-faq__accordion.active .loan-faq__arrow-down{
+    transform:rotate(225deg);
+}
+
+@media all and (min-width:576px){
+
+    .loan-ca__header{
+        flex-direction: row;
+    }
+
+    .loan-ca__image{
+        margin-bottom:0px;
+    }
+
+    .loan-ca__step{
+        flex-basis:50%;
+    }  
+
+    .loan-santander__header{
+        flex-direction: row;
+    }
+
+    .loan-santander__step{
+        flex-basis:50%;
+    }
+
+    .loan-santander__image--button{
+        margin-bottom:0px; 
+    }
+
+    .loan-faq__arrow-down{
+        margin-left:30px;
+    }
+
+    .loan-faq__question {
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    .loan-faq__answer{
+        font-size: 14px;
+    }
+}
+
+@media all and (min-width:768px){
+    .loan__button {
+        font-size: 20px;
+    }
+
+    .loan-ca__header{
+        padding-left:10px;
+        padding-right:20px;
+    }
+
+    .loan-santander__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left:0px;
+    }
+
+    .loan-ca__step {
+        flex-basis: 33%;
+        padding:12px;
+    }
+
+    .loan-faq__question {
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    .loan-faq__answer{
+        font-size: 14px;
+    }
+}

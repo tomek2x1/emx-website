@@ -1,0 +1,116 @@
+
+body{
+    background-color: rgb(247, 247, 247);
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.payment{
+    max-width:1200px;
+    margin:20px auto;
+    font-size:14px;
+}
+
+.payment__title{
+    margin-top:50px;
+    font-weight: 500;
+    margin-left:40px;
+}
+
+.payment-box{
+    margin-top:10px;
+    background:#fff;
+    display: flex;
+    flex-direction: column;
+    padding:25px;
+}
+
+.payment-box__header{
+    text-align: center;
+    padding-right:25px;
+}
+
+.payment-box__title{
+    font-size:21px;
+    margin:0;
+    font-weight: 600;
+}
+
+.payment-box__image{
+    width:120px;
+}
+
+.payment-box__body{
+    display: flex;
+    flex-direction: column;
+    flex-basis:100%;  
+    font-size:14px;
+    justify-content: space-between;
+}
+
+.payment-box__content{
+    margin:0;
+    line-height: 24px;
+    text-align: justify;
+    padding-left:0px;
+    padding-right:0px;
+}
+
+.payment__important{
+    font-weight: 700;
+}
+
+.payment-box__list{
+    margin-bottom:0;    
+}
+
+.payment-box__company-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    text-align: justify;
+}
+
+.payment-box__company-item{
+    margin-right: 10px;
+}
+
+.payment-box__link{
+    text-decoration: none;
+    color:#f29400;
+}
+
+.payment-box__logo{
+    height:50px;
+}
+
+.payment-box__logo--big{
+    height:70px;
+}
+
+@media all and (min-width: 576px) {
+    .payment-box {
+        flex-direction: row;
+    }
+
+    .payment-box__header {
+        flex-basis: 250px;
+    }
+
+    .payment-box__company-list{
+        justify-content: flex-start;
+    }
+
+    .payment-box__company-list{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        list-style-type: none;
+        padding:0;
+        margin:0;
+        margin-top:20px;
+        text-align: justify;
+    }
+}
